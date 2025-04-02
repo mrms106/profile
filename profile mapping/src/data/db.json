@@ -1,0 +1,20 @@
+{
+  "profiles": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "photo": "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
+      "description": "Software Engineer at Google",
+      "location": {
+        "address": "123 Main St, New York, NY",
+        "lat": 40.7128,
+        "lng": -74.006
+      },
+      "contact": "john.doe@example.com",
+      "interests": [
+        "Coding",
+        "Traveling"
+      ]
+    }
+  ]
+}
