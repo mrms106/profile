@@ -71,14 +71,73 @@ function AddProfileForm() {
   return (
     <Container>
       {error && <Alert severity="error">{error}</Alert>}
-      <form onSubmit={handleAddProfile}>
-        <TextField fullWidth label="Name" name="name" required value={formData.name} onChange={handleChange} style={{ marginBottom: "10px" }} />
-        <TextField fullWidth label="Photo URL" name="photo" value={formData.photo} onChange={handleChange} style={{ marginBottom: "10px" }} />
-        <TextField fullWidth label="Description" name="description" required value={formData.description} onChange={handleChange} style={{ marginBottom: "10px" }} />
-        <TextField fullWidth label="Address" name="address" required value={formData.address} onChange={handleChange} style={{ marginBottom: "10px" }} />
-        <TextField fullWidth label="Contact Email" name="contact" required value={formData.contact} onChange={handleChange} style={{ marginBottom: "10px" }} />
-        <TextField fullWidth label="Interests (comma separated)" name="interests" required value={formData.interests} onChange={handleChange} style={{ marginBottom: "10px" }} />
-        <Button type="submit" variant="contained" color="primary" disabled={loading}>
+      <form onSubmit={handleAddProfile} style={{ background: "#1e1e1e", padding: "2rem", borderRadius: "10px" }}>
+        <TextField
+          fullWidth
+          label="Name"
+          name="name"
+          required
+          value={formData.name}
+          onChange={handleChange}
+          InputLabelProps={{ style: { color: "white" } }} // White label
+          InputProps={{ style: { color: "white" } }} // White input text
+          style={{ marginBottom: "15px" }}
+        />
+        <TextField
+          fullWidth
+          label="Photo URL"
+          name="photo"
+          value={formData.photo}
+          onChange={handleChange}
+          InputLabelProps={{ style: { color: "white" } }}
+          InputProps={{ style: { color: "white" } }}
+          style={{ marginBottom: "15px" }}
+        />
+        <TextField
+          fullWidth
+          label="Description"
+          name="description"
+          required
+          value={formData.description}
+          onChange={handleChange}
+          InputLabelProps={{ style: { color: "white" } }}
+          InputProps={{ style: { color: "white" } }}
+          style={{ marginBottom: "15px" }}
+        />
+        <TextField
+          fullWidth
+          label="Address"
+          name="address"
+          required
+          value={formData.address}
+          onChange={handleChange}
+          InputLabelProps={{ style: { color: "white" } }}
+          InputProps={{ style: { color: "white" } }}
+          style={{ marginBottom: "15px" }}
+        />
+        <TextField
+          fullWidth
+          label="Contact Email"
+          name="contact"
+          required
+          value={formData.contact}
+          onChange={handleChange}
+          InputLabelProps={{ style: { color: "white" } }}
+          InputProps={{ style: { color: "white" } }}
+          style={{ marginBottom: "15px" }}
+        />
+        <TextField
+          fullWidth
+          label="Interests (comma separated)"
+          name="interests"
+          required
+          value={formData.interests}
+          onChange={handleChange}
+          InputLabelProps={{ style: { color: "white" } }}
+          InputProps={{ style: { color: "white" } }}
+          style={{ marginBottom: "15px" }}
+        />
+        <Button type="submit" variant="contained" color="primary" disabled={loading} style={{ fontSize: "1.2rem", padding: "10px 20px" }}>
           {loading ? "Adding..." : "Add Profile"}
         </Button>
       </form>
